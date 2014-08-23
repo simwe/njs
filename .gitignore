@@ -5,7 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
-.c9
+.c9/
 c9
 # Build results
 
