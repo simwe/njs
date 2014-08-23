@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "express": "^3.4.4",
-    "stylus": "*",
-    express-handlebars:  "*"
+    "express-handlebars": "*",
+    "socket.io": "^1.0.6",
+    "stylus": "*"
   }
 }

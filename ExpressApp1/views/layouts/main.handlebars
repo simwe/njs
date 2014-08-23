@@ -1,6 +1,17 @@
 ﻿<!doctype html>
 <html>
 <head>
+﻿   <script src="/socket.io/socket.io.js"></script>
+﻿   
+﻿   <script type="text/javascript">
+        var socket = io();
+        
+        socket.on('info', function (data) {
+            console.log(data);
+        });
+
+    </script>
+
     <meta charset="utf-8" />
     <title>Example App</title>
 </head>
