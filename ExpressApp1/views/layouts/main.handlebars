@@ -1,21 +1,50 @@
 ﻿<!doctype html>
 <html>
 <head>
-﻿   <script src="/socket.io/socket.io.js"></script>
-﻿   
-﻿   <script type="text/javascript">
+    ﻿
+    <script src="/socket.io/socket.io.js"></script>    ﻿
+
+    <link rel="stylesheet" href="/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css">
+
+    <script src="/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    ﻿
+    ﻿
+    <script type="text/javascript">
         var socket = io();
-        
+
         socket.on('info', function (data) {
             console.log(data);
         });
 
     </script>
-
     <meta charset="utf-8" />
     <title>Example App</title>
 </head>
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    16A Security
+                    {{#if user }}
+                    --Logged in as {{user.username}}
+                    {{/if}}
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <div class="navbar-right">
+                    <a class="btn btn-success" href="/auth/google">Sign In with Google</a>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
 
     {{{body}}}
 </body>
